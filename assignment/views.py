@@ -4,6 +4,11 @@ from .forms import ProductForm, UserForm
 from .models import user,products
 
 
+def index(request):
+    return redirect("/home")
+
+def home(request):
+    return render(request,"index.html")
    
 def users(request):
     UsersData = user.objects.all()
